@@ -1,7 +1,7 @@
-
 import torch as t
 import torch.nn as nn
 
+from Attention_Mechanism import ResidualCBAMBlock
 device = 'cuda' if t.cuda.is_available() else 'cpu'
 class DoubleConv(nn.Module):
     def __init__(self, in_channel, out_channels):
