@@ -2,7 +2,6 @@ import torch as t
 import torch.nn as nn
 
 from unet_parts import DoubleConv, Downsample, UpSample
-from Attention_Mechanism import ResidualCBAMBlock, SpatialAttention, ChannelAttention
 
 class unet(nn.Module):
     def __init__(self, in_channel, num_classes):
