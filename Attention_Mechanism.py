@@ -16,9 +16,9 @@ class ChannelAttention(nn.Module):
                    )
         else:
               self.fc = nn.Sequential(
-                   nn.liner(in_channels, in_channels // reduction, 1, bias=Bias),
+                   nn.linear(in_channels, in_channels // reduction, 1, bias=Bias),
                    nn.ReLU(inplace=True),
-                   nn.liner(in_channels // reduction, in_channels, 1, bias=Bias)
+                   nn.linear(in_channels // reduction, in_channels, 1, bias=Bias)
                    )
 
         self.sigmoid = nn.Sigmoid()
